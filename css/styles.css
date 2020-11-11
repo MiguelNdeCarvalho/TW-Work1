@@ -3,7 +3,7 @@ body {
     background-image: linear-gradient(aqua, DodgerBlue);
     background-attachment: fixed;
     font-size: 100%;
-    margin: 30px;
+    margin: 0;
 
 }
 
@@ -85,14 +85,14 @@ body {
   padding-right: 10px;
 }
 
-#cabecalho .navbar input[type=text] {
+#cabecalho .navbar form input {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
 }
 
-#cabecalho .navbar .search-container button {
+#cabecalho .navbar form button {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
@@ -103,6 +103,6 @@ body {
   cursor: pointer;
 }
 
-#cabecalho .navbar .search-container button:hover {
+#cabecalho .navbar form button:hover {
   background: #ccc;
 }

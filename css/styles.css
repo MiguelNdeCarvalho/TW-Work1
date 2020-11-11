@@ -4,7 +4,7 @@ body {
     background-attachment: fixed;
     font-size: 100%;
     margin: 0;
-
+    font-family: "Exo 2";
 }
 
 
@@ -52,7 +52,7 @@ body {
 }
 
 @media only screen and (min-width: 480px) {                                 
-    /* 29px */                                 
+    /* 125px */                                 
 }
 
 #cabecalho .navbar {

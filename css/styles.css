@@ -63,17 +63,14 @@ body {
 
 
 
-@media only screen and (min-width: 750px) {
-    
-    body {
-        
-        background-image: linear-gradient(aqua, white);
-        background-attachment: fixed;
+@media only screen and (min-width: 690px) {
+    /* 227px */ 
+}
 
-    }
+@media only screen and (min-width: 600px) {
+    /* 180px */
+}
 
-    img {
-
-        width: 15%;
-    }
+@media only screen and (min-width: 480px) {                                 
+    /* 29px */                                 
 }

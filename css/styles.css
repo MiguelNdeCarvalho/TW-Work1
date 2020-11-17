@@ -5,6 +5,7 @@ body {
     font-size: 100%;
     margin: 0;
     font-family: "Exo 2";
+    padding: 0em 1em;
 }
 
 
@@ -12,9 +13,20 @@ body {
     
     background-color: #FFF;
     line-height: 1em;
-    padding: 0em 1em;
+    padding: 10em 1em;
     border: solid black;
     overflow: hidden;
+    float: left;
+}
+
+#cabecalho img{
+
+  width: 4em;
+}
+
+#cabecalho{
+
+  padding: 1em 1em;
 
 }
 
@@ -25,6 +37,16 @@ body {
     padding: 0em 1em;
     border: solid black;
     overflow: hidden;
+
+}
+
+#detalhes_do_produto{
+    
+  background-color: #FFF;
+  line-height: 1em;
+  padding: 0em 1em;
+  border: solid black;
+  overflow: hidden;
 
 }
 
@@ -58,8 +80,11 @@ body {
 #cabecalho .navbar {
   overflow: hidden;
   background-color: #e9e9e9;
-}
+  border: solid black;
+  padding: 0.5em 1em;
 
+}
+/*
 #cabecalho .navbar a {
   float: left;
   display: block;
@@ -75,20 +100,22 @@ body {
   color: black;
 }
 
+
 #cabecalho .navbar a.active {
   background-color: #2196F3;
   color: white;
 }
+*/
 
 #cabecalho .navbar form {
   float: right;
-  padding-right: 10px;
+  padding-right: 1em;
 }
 
 #cabecalho .navbar form input {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
+  padding: 0.35em 10em;
+  margin-top: 0.5em;
+  font-size: 1.1em;
   border: none;
 }
 

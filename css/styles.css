@@ -77,6 +77,10 @@ body {
 
 }
 
+#cabecalho .navbar img{
+  float: left;
+}
+
 #cabecalho .navbar a {
   float: left;
   display: block;

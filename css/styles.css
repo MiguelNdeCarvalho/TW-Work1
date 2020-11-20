@@ -69,8 +69,6 @@ body {
   overflow: hidden;
   background-color: #e9e9e9;
   border: solid black;
-  padding: 0.5em 1em;
-  margin-right: 1em;
 }
 
 #cabecalho .navbar img{
@@ -100,16 +98,15 @@ body {
   color: white;
 }
 
-
-#cabecalho .navbar form {
+#cabecalho .navbar form {  
+  padding-right: 10px;
   float: right;
-  padding-right: 1em;
 }
 
 #cabecalho .navbar form input {
-  padding: 0.35em 10em;
-  margin-top: 0.5em;
-  font-size: 1.1em;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
   border: none;
 }
 

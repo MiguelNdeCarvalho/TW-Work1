@@ -104,19 +104,16 @@ body {
 }
 
 #cabecalho .navbar form input {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
+  font-size: 23px;
   border: none;
+  padding: 0.82em 0.73em;
 }
 
 #cabecalho .navbar form button {
   float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 0.3em;
+  padding: 1.1em 1em;
   background: #ddd;
-  font-size: 17px;
+  font-size: 19px;
   border: none;
   cursor: pointer;
 }

@@ -1,55 +1,44 @@
 body {
-
-    background-image: linear-gradient(aqua, DodgerBlue);
     background-attachment: fixed;
     font-size: 100%;
+    color: #fff;
     margin: 0;
     font-family: "Exo 2";
+    background-color: #121212;
 }
 
 
 #categorias{
-    background-color: #FFF;
     line-height: 1em;
     padding: 10em 1em;
-    border: solid black;
+    border: solid #0d0d0d;
     overflow: hidden;
     float: left;
+    background-color: #404040;
+    text-align: left;
 }
 
-
-#cabecalho{
-
-}
-
-#produtos{
-    
-    background-color: #FFF;
+#produtos{ 
     line-height: 1em;
     padding: 0em 1em;
-    border: solid black;
+    border: solid #0d0d0d;
     overflow: hidden;
-
+    background-color: #1a1a1a;
 }
 
-#detalhes_do_produto{
-    
-  background-color: #FFF;
+#detalhes_do_produto{  
   line-height: 1em;
   padding: 0em 1em;
-  border: solid black;
+  border: solid #0d0d0d;
   overflow: hidden;
-
 }
 
 #about{
-    
-    background-color: #FFF;
     line-height: 1em;
     padding: 0em 1em;
-    border: solid black;
+    border: solid #0d0d0d;
     overflow: hidden;
-
+    background-color: #1a1a1a;
 }
 
 @media only screen and (min-width: 690px) {
@@ -64,18 +53,22 @@ body {
     /* 125px */                                 
 }
 
-#cabecalho .navbar {
-  overflow: hidden;
-  background-color: #e9e9e9;
-  border: solid black;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+#cabeçalho {
+  border: solid #0d0d0d;
 }
 
-#cabecalho .navbar img{
+#cabecalho .navbar {
+  overflow: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  background-color: #404040;
+  vertical-align: text-bottom;
+}
+
+#cabecalho img{
   float: left;
   margin-right: 0.3em;
-  width: 4em;
+  width: 250px;
 }
 
 #cabecalho .navbar a {
@@ -95,7 +88,7 @@ body {
 
 
 #cabecalho .navbar a.active {
-  background-color: #2196F3;
+  background-color: #62acb573;
   color: white;
 }
 
@@ -111,13 +104,14 @@ body {
 
 #cabecalho .navbar form button {
   float: right;
-  padding: 1.1em 1em;
-  background: #ddd;
+  padding: 1.12em 1em;
   font-size: 19px;
   border: none;
   cursor: pointer;
+  background: #62acb573;
+  color: white;
 }
 
 #cabecalho .navbar form button:hover {
-  background: #ccc;
+  background: #295157;
 }

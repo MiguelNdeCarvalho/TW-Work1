@@ -32,8 +32,12 @@ body {
 #produtos img{ 
   float: left;
   clear: left;
-  width: 20%;
+  width: 227px;
   margin-bottom: 2em;
+}
+
+.price {
+  font-size: 20px;
 }
 
 #detalhes_do_produto{  

@@ -10,12 +10,13 @@ body {
 
 #categorias{
     line-height: 1em;
-    padding: 10em 1em;
+    padding: 1em 1em;
     border: solid #0d0d0d;
     overflow: hidden;
     float: left;
     background-color: #404040;
     text-align: left;
+    margin: 20px
 }
 
 #produtos{ 
@@ -24,6 +25,8 @@ body {
     border: solid #0d0d0d;
     overflow: hidden;
     background-color: #1a1a1a;
+    margin: 20px
+
 }
 
 #produtos img{ 
@@ -38,6 +41,8 @@ body {
   padding: 0em 1em;
   border: solid #0d0d0d;
   overflow: hidden;
+  margin: 20px
+
 }
 
 #about{
@@ -46,6 +51,9 @@ body {
     border: solid #0d0d0d;
     overflow: hidden;
     background-color: #1a1a1a;
+    margin: 20px;
+    margin-left: 250px;
+
 }
 
 @media only screen and (min-width: 690px) {
@@ -62,6 +70,7 @@ body {
 
 #cabeçalho {
   border: solid #0d0d0d;
+
 }
 
 #cabecalho .navbar {

@@ -16,18 +16,34 @@ body {
     float: left;
     background-color: #404040;
     text-align: left;
-    margin: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
     width: 205;
 }
 
 #produtos{ 
     line-height: 1em;
-    padding: 0em 1em;
     border: solid #0d0d0d;
     overflow: hidden;
     background-color: #1a1a1a;
-    margin: 20px
+    margin: 20px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    
 
+}
+
+#product {
+  overflow:auto;
+  margin:0.5em;
+  border-style: groove;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#product p{
+  
+  margin-top: 20px;
+  margin-left: 140px;
 }
 
 #produtos img{ 
@@ -52,18 +68,14 @@ body {
 
 #about{
     line-height: 1em;
-    padding: 0em 1em;
+    padding: 0.3em 1em 1em 1em;
     border: solid #0d0d0d;
-    overflow: hidden;
     background-color:  #404040;
-    margin: 20px;
-    margin-left: 252px;
-
 }
 
 /*responsive images*/
 
-@media only screen and (min-width: 690px) {
+/* @media only screen and (min-width: 690px) {
 
     #produtos img{ 
       width: 227px;
@@ -75,36 +87,38 @@ body {
     #produtos img{ 
       width: 180px;
     }  
-}
+} */
 
-@media only screen and (min-width: 480px) {                                 
-    
-    #produtos img{ 
-      width: 125px;
-    }                                
-}
 
 /*responsive pages*/
+@media only screen and (min-width: 480px) {                                 
+  
+  #categorias{
 
-@media only screen and (min-width: 690px) {
+    float:left;
+  }
 
+  #produtos img{ 
+    width: 125px;
+  }   
 }
 
 @media only screen and (min-width: 600px) {
-
+  body{
+    background: pink;
+  }
 }
 
-@media only screen and (min-width: 480px) {                                 
-                  
+@media only screen and (min-width: 690px) {
+
+  body{
+
+    background:red;
+  }
 }
 
-
-
-
-/*search bar*/
-
-#cabeçalho {
-  border: solid #0d0d0d;
+#cabecalho {
+  border-bottom: solid #0d0d0d;
 }
 
 #cabecalho .navbar {

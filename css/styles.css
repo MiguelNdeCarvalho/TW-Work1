@@ -36,14 +36,16 @@ body {
 }
 
 #produtos{ 
-    line-height: 1em;
-    border: solid #0d0d0d;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    margin: 20px;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    
+  line-height: 1em;
+  border: solid #0d0d0d;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  margin: 20px;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
 
+#produtos #result h4{
+  text-align: center;
 }
 
 #product {

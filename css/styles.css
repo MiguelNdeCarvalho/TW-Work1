@@ -1,3 +1,4 @@
+
 body {
     background-attachment: fixed;
     font-size: 100%;
@@ -8,6 +9,8 @@ body {
 }
 
 
+/*----------------CATEGORIAS-----------------*/
+
 #categorias{
     line-height: 1em;
     padding: 1em 1em;
@@ -16,8 +19,7 @@ body {
     float: left;
     background-color: #404040;
     text-align: left;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin: 20px;
     width: 205px;
 }
 
@@ -34,6 +36,8 @@ body {
   color: white;
   font-weight: bold;
 }
+
+/*----------------PRODUTOS-----------------*/
 
 #produtos{ 
   line-height: 1em;
@@ -97,20 +101,21 @@ body {
   color: #62acb573;
 }
 
-#page
-
 .price {
   font-size: 20px;
 }
 
-#detalhes_do_produto{  
-  line-height: 1em;
-  padding: 0em 1em;
-  border: solid #0d0d0d;
-  overflow: hidden;
+/*----------------DETALHES DOS PRODUTOS-----------------*/
+
+#detalhes_do_produto{
+  text-align: center;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   margin: 20px
 
 }
+
+/*----------------ABOUT-----------------*/
+
 
 #about{
     line-height: 1em;
@@ -119,68 +124,116 @@ body {
     background-color:  #404040;
 }
 
-/*responsive pages*/
-@media only screen and (min-width: 480px) {                                 
-  
-  #categorias{
+@media only screen and (min-width: 300px) {                                 
+  #cabecalho .navbar img{
+    float: none;
+  }
 
+  
+  #cabecalho .navbar :link, #cabecalho .navbar :active{
+    position: inherit;
+    visibility: hidden;
+  }
+
+  #cabecalho .navbar form{
+    position: static;
+  }
+
+  #categorias{
     float:none;
   }
 
   #produtos img{ 
+    margin-bottom: 5px;
     width: 124px;
-  }   
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  #product p{
+    margin-left: 0px;
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (min-width: 480px) {                                 
+  
+  #categorias{
+    float:none;
+  }
+
+
+
+  #cabecalho .navbar a:link, #cabecalho .navbar a:active{
+    visibility: hidden;
+  }
+
+  #product p{
+    margin-left: 0px;
+    margin-top: 1em;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   
   #categorias{
-
-    float:left;
+    float: none;
   }
-
-  /* body{
-    background: pink;
-  } */
 
   #produtos img{ 
     width: 180px;
+    margin-left: 0px;
   } 
+
+  #cabecalho .navbar a:link, #cabecalho .navbar a:active{
+    visibility: visible;
+  }
+
+  #detalhes_do_produto h3, #detalhes_do_produto p, #detalhes_do_produto li{
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 690px) {
 
   #categorias{
-
-    position: cen
+    float: left;
   }
 
-  /* body{
+  #detalhes_do_produto h3, #detalhes_do_produto p{  
+    text-align: left;
+  }
 
-    background:red;
-  } */
+  #cabecalho .navbar a:link, #cabecalho .navbar a:active{
+    visibility: visible;
+  }
 
   #produtos img{ 
     width: 227px;
   } 
 }
 
-#cabecalho {
-  border-bottom: solid #0d0d0d;
-}
-
-#cabecalho .navbar {
+#cabecalho{
   overflow: auto;
   padding-right: 0.5em;
   padding-left: 0.5em;
   background-color: #404040;
-  vertical-align: text-bottom;
+  border-bottom: solid #0d0d0d;
+  position: relative;
 }
 
 #cabecalho img{
   float: left;
   margin-right: 0.3em;
   width: 100px;
+}
+
+#cabecalho .navbar{
+  overflow: auto;
+  bottom: 100%;
 }
 
 #cabecalho .navbar a {
@@ -202,10 +255,14 @@ body {
 #cabecalho .navbar a.active {
   background-color: #62acb573;
   color: white;
+  position: absolute;
+  bottom: 20%;
 }
 
 #cabecalho .navbar form {  
-  float: right;
+  position: absolute;
+  bottom: 20%;
+  right: 1%;
 }
 
 #cabecalho .navbar form input {

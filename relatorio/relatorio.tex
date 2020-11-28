@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}   % tipo de documento e tamanho das letras
+
+% os seguintes pacotes estendem a funcionalidade básica:
+\usepackage[a4paper, total={16cm, 24cm}]{geometry} % tamanho da pagina e do texto
+\usepackage[portuguese]{babel}  % traduz para portugues
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}           % graficos
+\usepackage{amsmath}            % matematica
+\usepackage{tikz}               % diagramas
+    \usetikzlibrary{shadows}
+\usepackage{booktabs}           % tabelas com  melhor aspecto
+\usepackage[colorlinks=true]{hyperref}           % links para partes do documento ou para a web
+\usepackage{listings}           % incluir codigo
+    \renewcommand\lstlistingname{Listagem}  % Listing em portugues
+    \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, basicstyle=\footnotesize\ttfamily, frame=tb,rulesepcolor=\color{gray}, breaklines=true}
+\usepackage{blindtext}
+
+% -------------------------------------------------------------------------------------------
+\title
+{
+    \includegraphics[width=0.3\textwidth]{images/logo_universidade.png}
+    \\[0.1cm]
+    \textbf{Simulador de Escalonamento de Processos} \\
+    Sistemas Operativos I
+}
+
+\author
+{
+    \textbf{Professores:} José Saias \\ Pedro Salgueiro
+    \textbf{Realizado por:} Miguel de Carvalho (43108) \\ João Pereira (42864) 
+}
+\date{\today}
+
+% -------------------------------------------------------------------------------------------
+%                                Body                                                       %
+% -------------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+% -------------------------------------------------------------------------------------------
+\section{Introdução} 
+
+\hspace{0,5cm}Neste trabalho foi solicitado a realização de um programa que simule o \textbf{Escalonamento de Processos} num Modelo de 3 Estados, representado na figura abaixo. \par
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{images/states.png}
+        \caption{Modelo de 3 Estados}
+    \end{center}
+\end{figure}
+O \textbf{Escalonador de Processos} faz parte do \textbf{Sistema Opertivo} e é responsável por decidir em que momento cada processo estará no CPU. 
+Existem muitos algoritmos de escalonamento para realizar essa decisão. \par
+Neste trabalho serão utilizados o algoritmo \textbf{FCFS} e o \textbf{Round Robin (RR)}:
+\begin{itemize}
+    \item O \textbf{FCFS} é um algoritmo de escalonamento não preemptivo que prioriza os processos pela ordem de chegada. Executa o processo todo do inicio ao fim sem o interromper, até estar concluído. Quando aparece um novo processo e ainda existe um em execução, esse novo fica em fila de espera.
+    \item O \textbf{Round Robin (RR)} é um algoritmo de escalonamento preemptivo que apresenta um funcionamento igual ao do \textbf{FCFS}, mas com tempo limite de execução, o \textbf{Quantum}. Assim, quando o processo se encontra em execução este será interrompido quando o tempo de execução for igual ao \textbf{Quantum} e fica em fila de espera (\textbf{READY}). 
+\end{itemize}
+
+% -------------------------------------------------------------------------------------------
+\section{Implementação}
+
+\hspace{0,5cm}
+
+-Tema do site: loja de roupa
+
+-Ficheiros HTML:
+
+    *advanced_search - pagina que permite aos utilizadores realizar pesquisas avançadas de produtos.
+
+    *product - apresentação de um unico produto com descrição
+    
+    *index - pagina inicial que mostra os varios produtos, categorias e informações do site
+
+- Ficheiro CSS: style.css
+
+- Estrutura do ficheiro index.html:
+
+    *cabeçalho: permite aos utilizadores pesquisar produtos;
+    *categorias: lista as várias categorias de produtos;
+    *produtos: lista os vários produtos disponíveis na loja online, ou os produtos resultantes de uma pesquisa;
+    *about: informação genérica sobre a página.
+
+    Comportamneto responsivo:
+
+- Estrutura do ficheiro product.html:
+
+    *cabeçalho: permite aos utilizadores pesquisar produtos;
+    *categorias: lista as várias categorias de produtos;
+    *detalhes do produto: descrição do produto com imagem;
+    *about: informação genérica sobre a página.
+
+    Comportamneto responsivo:
+
+- Estrutura do ficheiro advanced_search.html:
+
+% -------------------------------------------------------------------------------------------
+\section{Funções}
+    
+\begin{itemize}
+    \item Funções pertencentes à manipulação das \verb|queues|:
+        \begin{itemize}
+            \item A função "\verb|queue_t *create_queue (int sz)|" cria a estrutura e aloca espaço para a \verb|queue|;
+            \item A função "\verb|void insert (queue_t *queue, int element)|" adiciona elementos na \textbf{stack};
+            \item A função "\verb|bool full (queue_t *queue)|" verifica se a \textbf{stack} se encontra \textbf{cheia}, e caso esteja, devolve \verb|True|;
+            \item A função "\verb|bool empty (queue_t *queue)|" verifica se a \textbf{stack} se encontra \textbf{vazia}, e caso esteja, devolve \verb|True|;
+            \item A função "\verb|int get (queue_t *queue)|" remove o primeiro elemento da \textbf{stack}, dando \verb|return| desse valor e move os elementos para a esquerda \verb|queue|. Por exemplo, o elemento da posição 2 passa para a posição 1;
+            \item A função "\verb|void printQueue(queue_t *queue)|" dá \verb|print| de todos os elementos da \verb|queue|;
+            \item A função "\verb|int top(queue_t *queue)|" dá \verb|return| do valor da última posição do \verb|queue|.
+        \end{itemize}
+    \newpage
+    \item Funções pertencentes à manipulação da \verb|struct de processos|:
+        \begin{itemize}
+            \item A função "\verb|process_t *create_process(int sz)|" cria a estrutura e aloca espaço para o \verb|processo|;
+            \item A função "\verb|process_t *insert_process(int beg, int end, int queues, int arr[])|" \newline insere um \verb|processo|;
+            \item A função "\verb|int find_PID(int PID, process_t *process_arr[], int n_process)|" procura o \textbf{PID} no \textbf{array} e devolve a sua posição;
+            \item A função "\verb|void update_run(int n_process, process_t *process_arr[])|" decrementa a primeira posição do \textbf{run} do \verb|processo|;
+            \item A função "\verb|void update_blocked(int n_process, process_t *process_arr[])|" decrementa a primeira posição do \textbf{blocked} do processo;
+            \item A função "\verb|void update_index_run(int n_process, process_t *process_arr[], int size)|" \newline move os elementos do \textbf{run} do \verb|processo| para a esquerda e verifique se existe algum número maior que 1000, caso exista irá mudar esse valor para 0;
+            \item A função "\verb|void update_index_blocked(int n_process, process_t *process_arr[], int size)| \newline move os elementos do \textbf{blocked} do processo para a esquerda e verifica se existe algum número maior que 1000, caso exista irá mudar esse valor para 0"
+        \end{itemize}
+\end{itemize}
+
+%-------------------------------------------------------------------------------------------
+\section{Execução}
+
+\hspace{0,5cm}Para executar o \textbf{Simulador de Escalonamento} o utilizador deverá passar como argumento o algoritmo a usar e o ficheiro de \textbf{input}.
+\begin{itemize}
+    \item Caso o utilizador escolha o \textbf{FCFS}, o \textbf{QUANTUM} irá ter um valor de \textbf{999}, deste modo nunca irá obrigar o \verb|processo| a passar para o estado \textbf{READY}.
+    \item Caso o utilizador escolha o \textbf{Round Robin}, o programa irá correr com o \textbf{Quantum} definido no código (\verb|#define QUANTUM_RR|).
+\end{itemize}
+\par Exemplos:
+\begin{itemize}
+    \item \verb|./.compiled --fcfs input1.txt| irá executar o \textbf{Simulador de Escalonamento} utilizando o algoritmo \textbf{FCFS} com o \verb|input1.txt|
+    \item \verb|./.compiled --rr input1.txt| irá executar o \textbf{Simulador de Escalonamento} utilizando o algoritmo \textbf{Round Robin} com o \verb|input1.txt|
+\end{itemize}
+% ----------\item ---------------------------------------------------------------------------------
+\newpage
+\section{Análise de Resultados} % Conclusão
+\begin{itemize}
+    \item Escalonamento com o Algoritmo \textbf{FCFS}:
+    \begin{itemize}
+        \item Com o \verb|input1.txt|:
+        \begin{verbatim}
+Instant  0 - Ready: 101           | Run: 100   | Blocked: Empty!
+Instant  1 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant  2 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant  3 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant  4 - Ready: 200 300 100   | Run: 101   | Blocked: Empty!
+Instant  5 - Ready: 300 100       | Run: 200   | Blocked: 101 
+Instant  6 - Ready: 300 100       | Run: 200   | Blocked: 101 
+Instant  7 - Ready: 100           | Run: 300   | Blocked: 101 200 
+Instant  8 - Ready: 100           | Run: 300   | Blocked: 101 200 
+Instant  9 - Ready: 100 101       | Run: 300   | Blocked: 200 
+Instant 10 - Ready: 100 101       | Run: 300   | Blocked: 200 
+Instant 11 - Ready: 100 101       | Run: 300   | Blocked: 200 
+Instant 12 - Ready: 100 101 200   | Run: 300   | Blocked: Empty!
+Instant 13 - Ready: 100 101 200   | Run: 300   | Blocked: Empty!
+Instant 14 - Ready: 101 200       | Run: 100   | Blocked: 300 
+Instant 15 - Ready: 101 200       | Run: 100   | Blocked: 300 
+Instant 16 - Ready: 101 200       | Run: 100   | Blocked: 300 
+Instant 17 - Ready: 101 200       | Run: 100   | Blocked: 300 
+Instant 18 - Ready: 101 200       | Run: 100   | Blocked: 300 
+Instant 19 - Ready: 101 200       | Run: 100   | Blocked: 300 
+Instant 20 - Ready: 101 200 300   | Run: 100   | Blocked: Empty!
+Instant 21 - Ready: 101 200 300   | Run: 100   | Blocked: Empty!
+Instant 22 - Ready: 101 200 300   | Run: 100   | Blocked: Empty!
+Instant 23 - Ready: 101 200 300   | Run: 100   | Blocked: Empty!
+Instant 24 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant 25 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant 26 - Ready: 300           | Run: 200   | Blocked: 100 
+Instant 27 - Ready: 100           | Run: 300   | Blocked: 200 
+Instant 28 - Ready: Empty!        | Run: 100   | Blocked: 200 
+Instant 29 - Ready: 200           | Run: 100   | Blocked: Empty!
+Instant 30 - Ready: 200           | Run: 100   | Blocked: Empty!
+Instant 31 - Ready: 200           | Run: 100   | Blocked: Empty!
+Instant 32 - Ready: 200           | Run: 100   | Blocked: Empty!
+Instant 33 - Ready: 200           | Run: 100   | Blocked: Empty!
+Instant 34 - Ready: Empty!        | Run: 200   | Blocked: Empty!
+Instant 35 - Ready: Empty!        | Run: 200   | Blocked: Empty!
+Instant 36 - Ready: Empty!        | Run: 200   | Blocked: Empty!    
+    
+        \end{verbatim}
+    \end{itemize}
+    \newpage
+    \item Escalonamento com o Algoritmo \textbf{RR (Round Robin)}:
+    \begin{itemize}
+        \item Com o \verb|input1.txt|:
+        \begin{verbatim}
+Instant  0 - Ready: 101           | Run: 100   | Blocked: Empty!
+Instant  1 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant  2 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant  3 - Ready: 200 300       | Run: 101   | Blocked: 100 
+Instant  4 - Ready: 300 100 101   | Run: 200   | Blocked: Empty!
+Instant  5 - Ready: 300 100 101   | Run: 200   | Blocked: Empty!
+Instant  6 - Ready: 100 101       | Run: 300   | Blocked: 200 
+Instant  7 - Ready: 100 101       | Run: 300   | Blocked: 200 
+Instant  8 - Ready: 100 101       | Run: 300   | Blocked: 200 
+Instant  9 - Ready: 101 300       | Run: 100   | Blocked: 200 
+Instant 10 - Ready: 101 300       | Run: 100   | Blocked: 200 
+Instant 11 - Ready: 101 300 200   | Run: 100   | Blocked: Empty!
+Instant 12 - Ready: 300 200 100   | Run: 101   | Blocked: Empty!
+Instant 13 - Ready: 200 100       | Run: 300   | Blocked: 101 
+Instant 14 - Ready: 200 100       | Run: 300   | Blocked: 101 
+Instant 15 - Ready: 200 100       | Run: 300   | Blocked: 101 
+Instant 16 - Ready: 100 300       | Run: 200   | Blocked: 101 
+Instant 17 - Ready: 300 101       | Run: 100   | Blocked: 200 
+Instant 18 - Ready: 300 101       | Run: 100   | Blocked: 200 
+Instant 19 - Ready: 300 101 200   | Run: 100   | Blocked: Empty!
+Instant 20 - Ready: 101 200 100   | Run: 300   | Blocked: Empty!
+Instant 21 - Ready: 200 100       | Run: 101   | Blocked: 300 
+Instant 22 - Ready: 200 100       | Run: 101   | Blocked: 300 
+Instant 23 - Ready: 100           | Run: 200   | Blocked: 300 
+Instant 24 - Ready: 100           | Run: 200   | Blocked: 300 
+Instant 25 - Ready: 100           | Run: 200   | Blocked: 300 
+Instant 26 - Ready: Empty!        | Run: 100   | Blocked: 300 
+Instant 27 - Ready: 300           | Run: 100   | Blocked: Empty!
+Instant 28 - Ready: 300           | Run: 100   | Blocked: Empty!
+Instant 29 - Ready: 100           | Run: 300   | Blocked: Empty!
+Instant 30 - Ready: Empty!        | Run: 100   | Blocked: Empty!
+Instant 31 - Ready: Empty!        | Run: Empty!| Blocked: 100 
+Instant 32 - Ready: Empty!        | Run: Empty!| Blocked: 100 
+Instant 33 - Ready: Empty!        | Run: Empty!| Blocked: 100 
+Instant 34 - Ready: Empty!        | Run: 100   | Blocked: Empty!
+Instant 35 - Ready: Empty!        | Run: 100   | Blocked: Empty!
+Instant 36 - Ready: Empty!        | Run: 100   | Blocked: Empty!
+Instant 37 - Ready: Empty!        | Run: 100   | Blocked: Empty!
+Instant 38 - Ready: Empty!        | Run: 100   | Blocked: Empty!
+Instant 39 - Ready: Empty!        | Run: 100   | Blocked: Empty!           
+        \end{verbatim}
+    \end{itemize}
+\end{itemize}
+
+% -------------------------------------------------------------------------------------------
+\newpage
+\section{Conclusão} % Conclusão
+\hspace{0,5cm}Em suma, com a realização deste trabalho "Simulador de Escalonamento" fiquei muito mais esclarecido sobre o seu funcionamento. \par
+Saliento que me ajudou a entender como funciona o escalonador e as condições que cada algoritmo (\textbf{FCFS}/\textbf{RR}), usa para proceder à mudança dos processos entre os estados e as respetivas diferenças de tempo no mesmo conjunto de processos, entre os respetivos algoritmos.  
+% -------------------------------------------------------------------------------------------
+\end{document}

@@ -108,10 +108,21 @@ body {
 /*----------------DETALHES DOS PRODUTOS-----------------*/
 
 #detalhes_do_produto{
-  text-align: center;
+  /* text-align: center; */
   padding: 0.5em 0.5em 0.5em 0.5em;
-  margin: 20px
+  margin: 20px;
+  overflow: auto;
+}1
 
+#detalhes_do_produto img{
+  width: 550px;
+  margin-right: 1em;
+  float: left;
+}
+
+#detalhes_do_produto #info{
+  overflow: auto;
+  margin-top: 5em;
 }
 
 /*----------------ABOUT-----------------*/
@@ -172,6 +183,8 @@ body {
 
   #produtos img{ 
     width: 124px;
+    float:left;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -192,6 +205,11 @@ body {
 
   #detalhes_do_produto h3, #detalhes_do_produto p, #detalhes_do_produto li{
     text-align: left;
+  }
+
+  #detalhes_do_produto img{
+    width: 300px;
+    float: left;
   }
 }
 

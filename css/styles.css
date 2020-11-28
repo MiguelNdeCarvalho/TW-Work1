@@ -129,8 +129,6 @@ body {
     float: none;
     clear: both;
   }
-
-  
   #cabecalho .navbar :link, #cabecalho .navbar :active{
     position: inherit;
     visibility: hidden;
@@ -217,6 +215,12 @@ body {
   #produtos img{ 
     width: 227px;
   } 
+}
+
+@media only screen and (max-width: 750px){
+  #categorias{
+    width: 100%;
+  }
 }
 
 #cabecalho{

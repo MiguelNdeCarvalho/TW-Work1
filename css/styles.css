@@ -118,10 +118,7 @@ body {
 
 
 #about{
-    line-height: 1em;
-    padding: 0.3em 1em 1em 1em;
-    border: solid #0d0d0d;
-    background-color:  #404040;
+    
 }
 
 @media only screen and (min-width: 300px) {                                 
@@ -290,4 +287,16 @@ body {
 
 #cabecalho .navbar form button:hover {
   background: #295157;
+}
+
+#about{
+  padding: 1em 1em 1em 1em;
+  line-height: 1em;
+  border-top: solid #0d0d0d;
+  background-color:  #404040;
+}
+
+#about a:link, #about a:visited{
+  text-decoration: none;
+  color: #fff;
 }

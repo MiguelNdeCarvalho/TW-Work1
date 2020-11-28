@@ -166,8 +166,6 @@ body {
     float:none;
   }
 
-
-
   #cabecalho .navbar a:link, #cabecalho .navbar a:active{
     visibility: hidden;
   }
@@ -176,6 +174,9 @@ body {
     margin-left: 0px;
     margin-top: 1em;
   }
+
+  #produtos img{ 
+    width: 124px;
 }
 
 @media only screen and (min-width: 600px) {

@@ -127,6 +127,7 @@ body {
 @media only screen and (min-width: 300px) {                                 
   #cabecalho .navbar img{
     float: none;
+    clear: both;
   }
 
   
@@ -186,6 +187,7 @@ body {
   #produtos img{ 
     width: 180px;
     margin-left: 0px;
+    float: left;
   } 
 
   #cabecalho .navbar a:link, #cabecalho .navbar a:active{

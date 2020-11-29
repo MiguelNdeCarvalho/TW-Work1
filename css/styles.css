@@ -111,17 +111,10 @@ body {
   /* text-align: center; */
   padding: 0.5em 0.5em 0.5em 0.5em;
   margin: 20px;
-  overflow: auto;
 }
 
 #detalhes_do_produto h1{
   color: #4f7075;
-}
-
-#detalhes_do_produto .product_img{
-  width: 550px;
-  margin-right: 1.5em;
-  float: left;
 }
 
 #detalhes_do_produto #info{
@@ -203,6 +196,16 @@ body {
   #produtos img{ 
     width: 124px;
     float:left;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #detalhes_do_produto .product_img{ 
+    width: 550px;
+    float:left;
+  }
+  #detalhes_do_produto .payments{
+    width:100%;
   }
 }
 

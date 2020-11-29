@@ -150,8 +150,15 @@ body {
   border: solid #0d0d0d;
   overflow: hidden;
   background-color: #1a1a1a;
-  margin: 20px;
   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#pesquisa_avancada h1{
+  color: #4f7075;
+}
+
+#pesquisa_avancada h4, #pesquisa_avancada h5{
+  display: inline-block;
 }
 
 #pesquisa_avancada input[type=box] ,input[type=submit]{

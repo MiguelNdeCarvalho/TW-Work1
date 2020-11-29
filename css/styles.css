@@ -185,6 +185,7 @@ body {
 
   #categorias{
     float:none;
+    width: auto;
   }
 
   #produtos img{ 
@@ -206,10 +207,7 @@ body {
 /*-----------------COMPORTAMENTO RESPONSIVO---------------*/
 
 @media only screen and (min-width: 480px) {                                 
-  
-  #categorias{
-    float:none;
-  }
+
 
   #cabecalho .navbar a:link, #cabecalho .navbar a:active{
     visibility: hidden;
@@ -267,10 +265,6 @@ body {
 
 @media only screen and (min-width: 690px) {
 
-  #categorias{
-    float: left;
-  }
-
   #detalhes_do_produto h3, #detalhes_do_produto p{  
     text-align: left;
   }
@@ -285,8 +279,19 @@ body {
 }
 
 @media only screen and (max-width: 750px){
+  #cabecalho .navbar img{
+    float: none;
+    clear: both;
+  }
+
+  #produtos{
+    width: auto;
+    margin: 20px 0px 20px 0px;
+  }
+
   #categorias{
-    width: 100%;
+    width: auto;
+    margin: 20px 0px 20px 0px;
   }
 }
 
@@ -295,6 +300,7 @@ body {
     float: left;
     width: 205px;
   }
+
 }
 
 /*----------------CABEÇALHO------------------*/

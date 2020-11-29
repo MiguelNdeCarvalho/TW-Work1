@@ -203,6 +203,8 @@ body {
   }
 }
 
+/*-----------------COMPORTAMENTO RESPONSIVO---------------*/
+
 @media only screen and (min-width: 480px) {                                 
   
   #categorias{
@@ -295,6 +297,8 @@ body {
   }
 }
 
+/*----------------CABEÇALHO------------------*/
+
 #cabecalho{
   overflow: auto;
   padding-right: 0.5em;
@@ -302,7 +306,6 @@ body {
   background-color: #404040;
   border-bottom: solid #0d0d0d;
   position: relative;
-  /* width: 100%; */
 }
 
 #cabecalho img{

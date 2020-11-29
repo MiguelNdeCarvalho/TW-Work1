@@ -125,7 +125,6 @@ body {
 }
 
 #detalhes_do_produto #info{
-  overflow: auto;
   margin-top: 1em;
 }
 

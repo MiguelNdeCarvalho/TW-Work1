@@ -232,6 +232,10 @@ body {
   #detalhes_do_produto .payments{
     width:100%;
   }
+  
+  #detalhes_do_produto h1{
+    line-height: 1em;
+  }
 }
 
 @media only screen and (min-width: 600px) {

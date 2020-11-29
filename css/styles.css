@@ -130,6 +130,16 @@ body {
   margin-right: 100%;
 }
 
+#detalhes_do_produto input[type=submit]{
+  background-color: #4f7075;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 /*---------------PESQUISA AVANÇADA---------------------*/
 
 #pesquisa_avancada{ 

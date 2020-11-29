@@ -33,41 +33,55 @@
 
 
         <div id="pesquisa_avancada">
+            <h1>Pesquisa Avançada</h1>
+            <form action="search.html">
+                <h4 style="display:inline-block">Descrição do produto:</h4>
+                <input type="text" name="Name" value="" maxlength="24" required>
 
-            <li>Descrição do produto: </li> 
-            <input type="text" name="Name" value="" maxlength="24">
+                <h4>Categorias:</h4>
+                <input type="radio" id="categoria1" name="categoria" value="tudo" checked>
+                <label for="categoria1">Tudo</label><br>
+                <input type="radio" id="categoria2" name="categoria" value="hoodies">
+                <label for="categoria1">Hoodies</label><br>
+                <input type="radio" id="categoria3" name="categoria" value="t_shirts">
+                <label for="categoria1">T-Shirts</label><br>
+                <input type="radio" id="categoria4" name="categoria" value="meias">
+                <label for="categoria1">Meias</label><br>
+                <input type="radio" id="categoria5" name="categoria" value="cap">
+                <label for="categoria1">Cap</label><br>
+                
+                <h4 style="display:inline-block">Intervalo de preço(preço mínimo e máximo) </h4> 
+                <br>
+                <h5 style="display:inline-block">Preço mínimo:</h5>
+                <input type="text" name="Name" value="" maxlength="24" required>
+                <br>
+                <h5 style="display:inline-block">Preço máximo:</h5>
+                <input type="text" name="Name" value="" maxlength="24" required>
 
-            <h2>Categorias:</h2>
-            <ul>
-                <li><a href="#">Tudo</a></li>
-                <li><a class="active" href="#">Hoodies</a></li>
-                <li><a href="#">T-Shirts</a></li>
-                <li><a href="#">Meias</a></li>
-                <li><a href="#">Cap</a></li>
-            </ul>
-            
-            <li>Intervalo de preço(preço mínimo e máximo) </li> 
-            <input type="text" name="Name" value="" maxlength="24">
-
-            Localização do produto: escolhido a partir de uma lista de localizações disponíveis;
-            <p>Localização do produto:</p>
-                <select name="Size" size="2" multiple>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                  <option>13</option>
+                <br>
+                <h4 style="display:inline-block">Localização do produto:</h4>
+                <select id="local" name="locallist" required>
+                    <option value="estarreja">Estarreja</option>
+                    <option value="porto">Porto</option>
+                    <option value="lisboa">Lisboa</option>
+                    <option value="evora">Évora</option>
                 </select>
+                
+                <br>
+                
+                <h4 style="display:inline-block">Data em que o produto foi listado na loja pela 1ª vez:</h4>
+                <input type="date" id="listado" name="produto_listado" required>
+                
+                <br>
+
+                <h4 style="display:inline-block">Data em que o produto deixa de estar disponível para venda.</h4>
+                <input type="date" id="indisponivel" name="produto_indisponivel" required>
+
+                <br>
+                <input type="submit" value="Procurar">
+                <input type="reset" value="Limpar">
+            </form>
             
-            <br>
-            <br>
-            
-            <p>Data em que o produto foi listado na loja pela 1ª vez</p>
-            <p>Data em que o produto deixa de estar disponível para venda.</p>
 
         </div>
 

@@ -110,7 +110,12 @@ body {
 #detalhes_do_produto{
   /* text-align: center; */
   padding: 0.5em 0.5em 0.5em 0.5em;
+  line-height: 1em;
+  border: solid #0d0d0d;
+  overflow: hidden;
+  background-color: #1a1a1a;
   margin: 20px;
+  padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
 #detalhes_do_produto h1{
@@ -119,6 +124,7 @@ body {
 
 #detalhes_do_produto #info{
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 #detalhes_do_produto .product_img{ 

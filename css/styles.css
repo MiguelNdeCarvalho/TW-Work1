@@ -121,6 +121,10 @@ body {
   margin-top: 1em;
 }
 
+#detalhes_do_produto .product_img{ 
+  margin-right: 1em;
+}
+
 #detalhes_do_produto .payments{
   margin-bottom: 1em;
   margin-right: 100%;

@@ -229,9 +229,12 @@ body {
     text-align: left;
   }
 
-  #detalhes_do_produto img{
+  #detalhes_do_produto .product_img{
     width: 300px;
     float: left;
+  }
+  #detalhes_do_produto .payments{
+    width: 25%;
   }
 }
 

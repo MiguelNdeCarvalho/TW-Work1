@@ -174,20 +174,7 @@ body {
 
 /*----------------ABOUT-----------------*/
 
-@media only screen and (min-width: 300px) {                                 
-  #cabecalho .navbar img{
-    float: none;
-    clear: both;
-  }
-  #cabecalho .navbar :link, #cabecalho .navbar :active{
-    position: inherit;
-    visibility: hidden;
-  }
-
-  #cabecalho .navbar form{
-    position: static;
-  }
-
+@media only screen and (min-width: 300px) {
   #categorias{
     float:none;
     width: auto;
@@ -211,13 +198,7 @@ body {
 
 /*-----------------COMPORTAMENTO RESPONSIVO---------------*/
 
-@media only screen and (min-width: 480px) {                                 
-
-
-  #cabecalho .navbar a:link, #cabecalho .navbar a:active{
-    visibility: hidden;
-  }
-
+@media only screen and (min-width: 480px) {
   #product p{
     margin-left: 0px;
     margin-top: 1em;
@@ -243,6 +224,30 @@ body {
     line-height: 1em;
     text-align: center;
   }
+
+  #cabecalho #procurar{
+    float: none;
+  }
+
+  #cabecalho #procurar form{
+    float: none;
+  }
+
+  #cabecalho #procurar input[type=text]{
+    width: 100%;
+  }
+
+  #cabecalho #procurar form button, #cabecalho #procurar a{
+    width: 100%;
+    margin-top: 0.1em;
+  }
+
+  #cabecalho img{
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -255,10 +260,6 @@ body {
     width: 180px;
     margin-left: 0px;
     float: left;
-  } 
-
-  #cabecalho .navbar a:link, #cabecalho .navbar a:active{
-    visibility: visible;
   }
 
   #detalhes_do_produto h3, #detalhes_do_produto p, #detalhes_do_produto li{
@@ -272,6 +273,18 @@ body {
   #detalhes_do_produto .payments{
     width: 25%;
   }
+
+  #cabecalho #procurar{
+    float: right;
+  }
+
+  #cabecalho img{
+    float: left;
+  }
+
+  #cabecalho #procurar form{
+    float: left;
+  }
 }
 
 @media only screen and (min-width: 690px) {
@@ -280,20 +293,12 @@ body {
     text-align: left;
   }
 
-  #cabecalho .navbar a:link, #cabecalho .navbar a:active{
-    visibility: visible;
-  }
-
   #produtos img{ 
     width: 227px;
   } 
 }
 
 @media only screen and (max-width: 750px){
-  #cabecalho .navbar img{
-    float: none;
-    clear: both;
-  }
 
   #produtos{
     width: auto;
@@ -304,11 +309,6 @@ body {
     width: auto;
     margin: 0px 0px 20px 0px;
   }
-
-  /* #main{display: -webkit-flex;}
-  #main #categorias{order: 2;}
-  #main #produtos{order: 1;}
-  #main #produtos::after{content: '\A';} */
 }
 
 @media only screen and (min-width: 750px){
@@ -316,7 +316,6 @@ body {
     float: left;
     width: 205px;
   }
-
 }
 
 /*----------------CABEÇALHO------------------*/
@@ -332,62 +331,52 @@ body {
 }
 
 #cabecalho img{
-  float: left;
-  margin-right: 0.3em;
   width: 100px;
 }
 
-#cabecalho .navbar{
+#cabecalho #procurar{
   overflow: auto;
-  bottom: 100%;
+  margin: 1.2em 0px 0px 0px;
 }
 
-#cabecalho .navbar a {
-  float: left;
+#cabecalho #procurar a{
+  float: right;
   display: block;
-  color: black;
   text-align: center;
-  padding: 1.02em 1.0em;
+  padding: 1em;
+  margin-left: 1em;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
+  background-color: #62acb573;
+  color: white;
 }
 
-#cabecalho .navbar a:hover {
+#cabecalho #procurar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-
-#cabecalho .navbar a.active {
-  background-color: #62acb573;
-  color: white;
-  position: absolute;
-  bottom: 20%;
+#cabecalho #procurar form{
+  overflow: hidden;
 }
 
-#cabecalho .navbar form {  
-  position: absolute;
-  bottom: 20%;
-  right: 1%;
-}
-
-#cabecalho .navbar form input {
-  font-size: 23px;
+#cabecalho #procurar input[type=text]{
+  padding: 1em;
+  font-size: 17px;
   border: none;
-  padding: 0.82em 0.73em;
 }
 
-#cabecalho .navbar form button {
+#cabecalho #procurar form button{
   float: right;
-  padding: 1.12em 1em;
-  font-size: 19px;
+  padding: 1em;
+  font-size: 17px;
   border: none;
   cursor: pointer;
   background: #62acb573;
   color: white;
 }
 
-#cabecalho .navbar form button:hover {
+#cabecalho #procurar form button:hover{
   background: #295157;
 }
 
